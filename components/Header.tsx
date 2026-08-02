@@ -23,13 +23,16 @@ export default function Header() {
             <Link href="/movies" className="hover:text-gold transition-colors">Movies</Link>
             <Link href="/tv" className="hover:text-gold transition-colors">TV Series</Link>
             <div className="group relative">
-              <button className="hover:text-gold transition-colors">Genres</button>
+              <Link href="/genres" className="hover:text-gold transition-colors">Genres</Link>
               <div className="absolute left-0 top-full hidden group-hover:grid grid-cols-2 gap-x-4 gap-y-1 bg-panel border border-gold/15 rounded-lg p-4 w-96 shadow-xl">
                 {GENRE_LIST.map((g) => (
                   <Link key={g.id} href={`/genres/${g.id}`} className="text-bone/70 hover:text-gold text-sm py-1">
                     {g.name}
                   </Link>
                 ))}
+                <Link href="/genres" className="text-gold hover:text-gold-light text-sm py-1 col-span-2 border-t border-gold/10 mt-1 pt-2">
+                  View all genres →
+                </Link>
               </div>
             </div>
             <Link href="/about" className="hover:text-gold transition-colors">About</Link>
@@ -102,7 +105,13 @@ export default function Header() {
             </Link>
           </nav>
 
-          <p className="mt-4 mb-2 text-xs text-gold uppercase tracking-wider">Genres</p>
+          <Link
+            href="/genres"
+            onClick={() => setOpen(false)}
+            className="mt-4 mb-2 inline-block text-xs text-gold uppercase tracking-wider hover:text-gold-light"
+          >
+            Genres — view all →
+          </Link>
           <div className="flex flex-wrap gap-2">
             {GENRE_LIST.map((g) => (
               <Link
