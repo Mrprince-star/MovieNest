@@ -1,0 +1,53 @@
+import Link from 'next/link';
+import Image from 'next/image';
+import { GENRE_LIST } from '@/lib/tmdb';
+
+export default function Header() {
+  return (
+    <header className="sticky top-0 z-50 bg-ink/90 backdrop-blur border-b border-gold/10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between gap-4">
+          <Link href="/" className="flex items-center gap-2 shrink-0">
+            <Image src="/logo.png" alt="MovieNest" width={40} height={40} className="rounded-full" />
+            <span className="font-display text-2xl tracking-wide">
+              MOVIE<span className="gold-text">NEST</span>
+            </span>
+          </Link>
+
+          <nav className="hidden md:flex items-center gap-6 font-body text-sm text-bone/80">
+            <Link href="/movies" className="hover:text-gold transition-colors">Movies</Link>
+            <Link href="/tv" className="hover:text-gold transition-colors">TV Series</Link>
+            <div className="group relative">
+              <button className="hover:text-gold transition-colors">Genres</button>
+              <div className="absolute left-0 top-full hidden group-hover:grid grid-cols-2 gap-x-4 gap-y-1 bg-panel border border-gold/15 rounded-lg p-4 w-96 shadow-xl">
+                {GENRE_LIST.map((g) => (
+                  <Link key={g.id} href={`/genres/${g.id}`} className="text-bone/70 hover:text-gold text-sm py-1">
+                    {g.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <Link href="/about" className="hover:text-gold transition-colors">About</Link>
+          </nav>
+
+          <form action="/search" className="hidden sm:flex items-center">
+            <input
+              type="text"
+              name="q"
+              placeholder="Search movies & shows"
+              aria-label="Search"
+              className="w-56 rounded-l-full bg-panel border border-gold/15 px-4 py-2 text-sm text-bone placeholder:text-slate-soft focus:outline-none focus:border-gold/60"
+            />
+            <button
+              type="submit"
+              className="rounded-r-full bg-gold text-ink px-4 py-2 text-sm font-medium hover:bg-gold-light transition-colors"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+      <div className="film-strip" />
+    </header>
+  );
+}
