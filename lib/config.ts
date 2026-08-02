@@ -6,5 +6,5 @@ export const SITE = {
     'MovieNest is your home for movie and TV reviews, trailers, and recommendations — plus free downloads of public domain and open-source films.',
   telegramUrl: 'https://t.me/MovieNest_Tv',
   contactEmail: 'faithfulbizteam@gmail.com',
-  url: 'https://movie-nest-xi.vercel.app',
+url: 'https://movienest.faithfulbiz.com.ng',
 };
