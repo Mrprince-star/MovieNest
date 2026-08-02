@@ -108,9 +108,9 @@ export default function Header() {
           <Link
             href="/genres"
             onClick={() => setOpen(false)}
-            className="mt-4 mb-2 inline-block text-xs text-gold uppercase tracking-wider hover:text-gold-light"
+            className="mt-4 mb-3 inline-flex items-center gap-1.5 rounded-full bg-gold/15 border border-gold/50 px-4 py-2 text-xs font-semibold text-gold uppercase tracking-wider hover:bg-gold hover:text-ink transition-colors"
           >
-            Genres — view all →
+            Genres — View All →
           </Link>
           <div className="flex flex-wrap gap-2">
             {GENRE_LIST.map((g) => (
