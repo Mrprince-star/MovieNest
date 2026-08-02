@@ -4,9 +4,7 @@ export const SITE = {
   brandTagline: 'Your Nest for Movies & TV Series',
   description:
     'MovieNest is your home for movie and TV reviews, trailers, and recommendations — plus free downloads of public domain and open-source films.',
-  // TODO: replace with your real Telegram channel link
-  telegramUrl: 'https://t.me/your_channel_here',
-  // TODO: replace with a real contact address
-  contactEmail: 'hello@movienest.example',
-  url: 'https://movienest.example',
+  telegramUrl: 'https://t.me/MovieNest_Tv',
+  contactEmail: 'faithfulbizteam@gmail.com',
+  url: 'https://movie-nest-xi.vercel.app',
 };
