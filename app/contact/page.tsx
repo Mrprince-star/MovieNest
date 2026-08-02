@@ -9,10 +9,13 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="font-display text-4xl sm:text-5xl tracking-wide mb-4">Contact Us</h1>
+      <h1 className="font-display text-4xl sm:text-5xl tracking-wide mb-4">
+        Contact Us
+      </h1>
+
       <p className="text-bone/80 leading-relaxed mb-10">
-        Questions, feedback, or a takedown request? Send us a message below, or reach out directly
-        through email or Telegram.
+        Questions, feedback, or a takedown request? Send us a message below,
+        or reach out directly through email or Telegram.
       </p>
 
       <form
@@ -90,16 +93,23 @@ export default function ContactPage() {
       </form>
 
       <div className="glass-card rounded-xl p-6 space-y-3">
-        <p className="text-sm text-slate-soft mb-1">Prefer to reach us directly?</p>
+        <p className="text-sm text-slate-soft mb-1">
+          Prefer to reach us directly?
+        </p>
+
         <p>
           <span className="text-gold">Email:</span>{' '}
-          <a href={`mailto:${SITE.contactEmail}`} className="text-bone/80 hover:text-gold">
+          <a
+            href={`mailto:${SITE.contactEmail}`}
+            className="text-bone/80 hover:text-gold"
+          >
             {SITE.contactEmail}
           </a>
         </p>
+
         <p>
           <span className="text-gold">Telegram:</span>{' '}
-          
+          <a
             href={SITE.telegramUrl}
             target="_blank"
             rel="noopener noreferrer"
