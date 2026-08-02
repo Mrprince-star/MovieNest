@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B0E14;
+  color: #F3EFE4;
+}
+
+::selection {
+  background-color: #C9A15C;
+  color: #0B0E14;
+}
+
+:focus-visible {
+  outline: 2px solid #C9A15C;
+  outline-offset: 2px;
+}
+
+/* Film-strip divider: repeating sprocket holes, echoes the logo */
+.film-strip {
+  height: 18px;
+  background-image:
+    linear-gradient(#12161F, #12161F),
+    repeating-linear-gradient(
+      90deg,
+      #0B0E14 0px,
+      #0B0E14 10px,
+      transparent 10px,
+      transparent 22px
+    );
+  background-size: 100% 100%, 22px 10px;
+  background-position: center, center;
+  background-repeat: no-repeat, repeat-x;
+  border-top: 1px solid rgba(201,161,92,0.25);
+  border-bottom: 1px solid rgba(201,161,92,0.25);
+  position: relative;
+}
+
+.glass-card {
+  background: rgba(18, 22, 31, 0.72);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 161, 92, 0.14);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(201, 161, 92, 0.55);
+  transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-card,
+  .glass-card:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+.gold-text {
+  background: linear-gradient(120deg, #E4C989, #C9A15C 55%, #8A6D33);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nest-texture {
+  background-image: radial-gradient(ellipse at 30% 20%, rgba(201,161,92,0.14), transparent 55%);
+}
