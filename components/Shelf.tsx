@@ -27,7 +27,10 @@ export default function Shelf({ id, heading, items, seeAllHref, fallbackMediaTyp
       <div className="flex items-end justify-between mb-4">
         <h2 className="font-display text-2xl sm:text-3xl tracking-wide">{heading}</h2>
         {seeAllHref && (
-          <Link href={seeAllHref} className="text-sm text-gold hover:text-gold-light">
+          <Link
+            href={seeAllHref}
+            className="inline-flex items-center gap-1 rounded-full bg-gold/15 border border-gold/50 px-4 py-1.5 text-sm font-semibold text-gold hover:bg-gold hover:text-ink transition-colors"
+          >
             See all →
           </Link>
         )}
