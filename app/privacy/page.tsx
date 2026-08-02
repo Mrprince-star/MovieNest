@@ -13,12 +13,6 @@ export default function PrivacyPage() {
       <p className="text-slate-soft font-mono text-sm mb-8">Last updated: {new Date().toLocaleDateString()}</p>
 
       <div className="prose prose-invert max-w-none text-bone/80 leading-relaxed space-y-6">
-        <p>
-          This is a starting template — have it reviewed by someone familiar with privacy law for your
-          country before publishing, especially if you have visitors in the EU/UK (GDPR) or California
-          (CCPA).
-        </p>
-
         <section>
           <h2 className="font-display text-2xl tracking-wide text-gold mb-2">Information We Collect</h2>
           <p>
