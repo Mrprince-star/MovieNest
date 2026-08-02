@@ -14,8 +14,7 @@ export default function TermsPage() {
 
       <div className="prose prose-invert max-w-none text-bone/80 leading-relaxed space-y-6">
         <p>
-          This is a starting template — have it reviewed before publishing. By using {SITE.name}, you
-          agree to the terms below.
+          By using {SITE.name}, you agree to the terms below.
         </p>
 
         <section>
