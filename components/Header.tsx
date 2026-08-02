@@ -1,13 +1,18 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { GENRE_LIST } from '@/lib/tmdb';
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 bg-ink/90 backdrop-blur border-b border-gold/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Link href="/" className="flex items-center gap-2 shrink-0" onClick={() => setOpen(false)}>
             <Image src="/logo.png" alt="MovieNest" width={40} height={40} className="rounded-full" />
             <span className="font-display text-2xl tracking-wide">
               MOVIE<span className="gold-text">NEST</span>
@@ -45,8 +50,74 @@ export default function Header() {
               Search
             </button>
           </form>
+
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            className="md:hidden inline-flex flex-col items-center justify-center gap-1.5 w-10 h-10 rounded-full border border-gold/20 hover:border-gold/60 transition-colors shrink-0"
+          >
+            <span
+              className={`block h-0.5 w-5 bg-bone transition-transform ${open ? 'translate-y-2 rotate-45' : ''}`}
+            />
+            <span className={`block h-0.5 w-5 bg-bone transition-opacity ${open ? 'opacity-0' : ''}`} />
+            <span
+              className={`block h-0.5 w-5 bg-bone transition-transform ${open ? '-translate-y-2 -rotate-45' : ''}`}
+            />
+          </button>
         </div>
       </div>
+
+      {open && (
+        <div className="md:hidden border-t border-gold/10 bg-ink/95 backdrop-blur px-4 sm:px-6 py-4">
+          <form action="/search" className="flex items-center mb-4">
+            <input
+              type="text"
+              name="q"
+              placeholder="Search movies & shows"
+              aria-label="Search"
+              className="flex-1 rounded-l-full bg-panel border border-gold/15 px-4 py-2 text-sm text-bone placeholder:text-slate-soft focus:outline-none focus:border-gold/60"
+            />
+            <button
+              type="submit"
+              className="rounded-r-full bg-gold text-ink px-4 py-2 text-sm font-medium hover:bg-gold-light transition-colors"
+            >
+              Search
+            </button>
+          </form>
+
+          <nav className="flex flex-col gap-1 font-body text-bone/80">
+            <Link href="/movies" onClick={() => setOpen(false)} className="py-2 hover:text-gold transition-colors">
+              Movies
+            </Link>
+            <Link href="/tv" onClick={() => setOpen(false)} className="py-2 hover:text-gold transition-colors">
+              TV Series
+            </Link>
+            <Link href="/about" onClick={() => setOpen(false)} className="py-2 hover:text-gold transition-colors">
+              About
+            </Link>
+            <Link href="/contact" onClick={() => setOpen(false)} className="py-2 hover:text-gold transition-colors">
+              Contact
+            </Link>
+          </nav>
+
+          <p className="mt-4 mb-2 text-xs text-gold uppercase tracking-wider">Genres</p>
+          <div className="flex flex-wrap gap-2">
+            {GENRE_LIST.map((g) => (
+              <Link
+                key={g.id}
+                href={`/genres/${g.id}`}
+                onClick={() => setOpen(false)}
+                className="rounded-full border border-gold/20 px-3 py-1.5 text-xs text-bone/80 hover:border-gold hover:text-gold transition-colors"
+              >
+                {g.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="film-strip" />
     </header>
   );
