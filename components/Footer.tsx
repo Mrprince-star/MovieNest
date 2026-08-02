@@ -17,7 +17,7 @@ export default function Footer() {
           <ul className="space-y-2 text-bone/70">
             <li><Link href="/movies" className="hover:text-gold">Movies</Link></li>
             <li><Link href="/tv" className="hover:text-gold">TV Series</Link></li>
-            <li><Link href="/genres/28" className="hover:text-gold">Genres</Link></li>
+            <li><Link href="/genres" className="hover:text-gold">Genres</Link></li>
             <li><Link href="/search" className="hover:text-gold">Search</Link></li>
           </ul>
         </div>
