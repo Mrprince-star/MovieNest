@@ -1,11 +1,12 @@
 import type { MetadataRoute } from 'next';
 import { SITE } from '@/lib/config';
 import { GENRE_LIST, getPopular, getTrending } from '@/lib/tmdb';
+import { getAllPosts } from '@/lib/blog';
 
 export const revalidate = 3600;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const staticRoutes = ['', '/movies', '/tv', '/genres', '/about', '/contact', '/privacy', '/terms', '/dmca'].map(
+  const staticRoutes = ['', '/movies', '/tv', '/genres', '/blog', '/about', '/contact', '/privacy', '/terms', '/dmca'].map(
     (path) => ({
       url: `${SITE.url}${path}`,
       lastModified: new Date(),
@@ -49,5 +50,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const m of popularMovies) addMovie(m.id);
   for (const t of popularTV) addTV(t.id);
 
-  return [...staticRoutes, ...genreRoutes, ...titleRoutes];
+  const blogRoutes = getAllPosts().map((post) => ({
+    url: `${SITE.url}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedDate),
+  }));
+
+  return [...staticRoutes, ...genreRoutes, ...titleRoutes, ...blogRoutes];
 }
