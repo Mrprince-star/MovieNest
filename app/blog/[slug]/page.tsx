@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
+import { getDetails, IMG } from '@/lib/tmdb';
 import { SITE } from '@/lib/config';
 import AdBanner from '@/components/AdBanner';
 
@@ -14,6 +16,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
+
+  let imageUrl: string | undefined;
+  if (post.featureMovieId) {
+    const movie = await getDetails('movie', String(post.featureMovieId));
+    if (movie?.backdrop_path) {
+      imageUrl = IMG.backdrop(movie.backdrop_path, 'w1280');
+    }
+  }
+
   return {
     title: post.title,
     description: post.description,
@@ -22,19 +33,44 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.description,
       type: 'article',
       publishedTime: post.publishedDate,
+      images: imageUrl ? [{ url: imageUrl, width: 1280, height: 720 }] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+      images: imageUrl ? [imageUrl] : undefined,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+      },
     },
   };
 }
 
-export default function BlogPostPage({ params }: Props) {
+export default async function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
+
+  let heroImage: string | null = null;
+  if (post.featureMovieId) {
+    const movie = await getDetails('movie', String(post.featureMovieId));
+    if (movie?.backdrop_path) {
+      heroImage = IMG.backdrop(movie.backdrop_path, 'w1280');
+    }
+  }
 
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
     description: post.description,
+    image: heroImage ? [heroImage] : undefined,
     datePublished: post.publishedDate,
     author: {
       '@type': 'Organization',
@@ -57,7 +93,14 @@ export default function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 pt-12">
+      {heroImage && (
+        <div className="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden">
+          <Image src={heroImage} alt={post.title} fill priority className="object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/10" />
+        </div>
+      )}
+
+      <div className={`mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 ${heroImage ? '-mt-16 relative' : 'pt-12'}`}>
         <Link href="/blog" className="text-sm text-gold hover:text-gold-light mb-6 inline-block">
           ← Back to Blog
         </Link>
