@@ -25,6 +25,7 @@ export default function Footer() {
           <p className="text-gold mb-3 font-medium">Site</p>
           <ul className="space-y-2 text-bone/70">
             <li><Link href="/about" className="hover:text-gold">About</Link></li>
+            <li><Link href="/blog" className="hover:text-gold">Blog</Link></li>
             <li><Link href="/contact" className="hover:text-gold">Contact</Link></li>
             <li>
               <a href={SITE.telegramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gold">
