@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getDetails, IMG } from '@/lib/tmdb';
 import { findCatalogEntry } from '@/lib/catalog';
+import { getReview } from '@/lib/reviews';
 import { SITE } from '@/lib/config';
 import Shelf from '@/components/Shelf';
 import AdBanner from '@/components/AdBanner';
@@ -30,14 +31,16 @@ export default async function MovieDetailPage({ params }: Props) {
   const movie = await getDetails('movie', params.id);
   if (!movie) notFound();
 
-  const catalogEntry = findCatalogEntry('movie', Number(params.id));
+  const movieId = Number(params.id);
+  const catalogEntry = findCatalogEntry('movie', movieId);
+  const reviewEntry = getReview(movieId);
   const year = movie.release_date ? new Date(movie.release_date).getFullYear() : null;
   const trailer = movie.videos?.results?.find(
     (v: any) => v.site === 'YouTube' && v.type === 'Trailer'
   );
   const cast = movie.credits?.cast?.slice(0, 8) ?? [];
 
-  const jsonLd = {
+  const movieJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Movie',
     name: movie.title,
@@ -54,12 +57,33 @@ export default async function MovieDetailPage({ params }: Props) {
       : undefined,
   };
 
+  const faqJsonLd = reviewEntry
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: reviewEntry.faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: f.answer,
+          },
+        })),
+      }
+    : null;
+
   return (
     <div className="pb-16">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(movieJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       <div className="relative">
         {movie.backdrop_path && (
@@ -139,6 +163,34 @@ export default async function MovieDetailPage({ params }: Props) {
           </div>
         </div>
       </div>
+
+      {reviewEntry && (
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 mt-12">
+          <h2 className="font-display text-2xl sm:text-3xl tracking-wide mb-4 text-gold">
+            Our Take
+          </h2>
+          <div className="space-y-4 text-bone/80 leading-relaxed">
+            {reviewEntry.review.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+
+          <h2 className="font-display text-2xl sm:text-3xl tracking-wide mt-10 mb-4 text-gold">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-3">
+            {reviewEntry.faqs.map((faq, i) => (
+              <details key={i} className="glass-card rounded-lg p-4 group">
+                <summary className="cursor-pointer font-medium text-bone list-none flex items-center justify-between">
+                  {faq.question}
+                  <span className="text-gold ml-4 group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p className="text-bone/70 mt-3 leading-relaxed">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      )}
 
       <AdBanner variant="banner" />
 
