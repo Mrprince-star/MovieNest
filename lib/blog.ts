@@ -1,5 +1,9 @@
 // Blog post content lives here as plain data. No CMS needed for this scale.
 // Each post is genuinely written for a specific search intent, not filler.
+//
+// IMPORTANT: if a paragraph string contains double quotes (e.g. HTML like
+// class="foo"), wrap that string in backticks, not double quotes, or the
+// build will break on the first embedded quote mark.
 
 export type BlogSection = {
   heading?: string;
@@ -12,10 +16,48 @@ export type BlogPost = {
   description: string;
   publishedDate: string; // ISO format
   tags: string[];
+  featureMovieId?: number; // TMDB movie id used for the post's hero/OG image
   sections: BlogSection[];
 };
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: 'where-to-watch-spider-man-brand-new-day-supergirl-2026',
+    title: 'Where to Watch Spider-Man: Brand New Day and Supergirl in 2026',
+    description:
+      'A clear, up to date guide to the legal ways to watch two of 2026 biggest releases, in theaters and at home.',
+    publishedDate: '2026-08-03',
+    tags: ['where to watch', '2026 movies', 'streaming guide'],
+    sections: [
+      {
+        paragraphs: [
+          "Two of the biggest releases of 2026 are Spider-Man: Brand New Day and Supergirl, and if you searched for either one, you are probably trying to figure out one simple thing. Can you watch it right now, and if not, when. Here is what is actually confirmed as of early August 2026, not speculation dressed up as fact.",
+        ],
+      },
+      {
+        heading: 'Spider-Man: Brand New Day',
+        paragraphs: [
+          "Spider-Man: Brand New Day, directed by Destin Daniel Cretton and starring Tom Holland, opened in theaters on July 31, 2026. Right now, theaters are the only legal way to watch it. There is no confirmed digital, rental, or streaming date yet.",
+          "Based on how Sony has handled previous Spider-Man releases, industry reporting suggests a premium digital rental could arrive sometime around late September to late October 2026, though Sony has not confirmed a date. Sony also has a Pay-1 deal that sends its films to Netflix after their theatrical and rental windows close, and early estimates based on that deal's typical timing point to a possible Netflix debut around late November 2026, though this is an estimate, not an announced date. If you are outside the US, the wait could be longer or shorter depending on your region's separate licensing deals.",
+          `You can check the film's current TMDB info and see if it has been added to our trending list by <a href="/search?q=Spider-Man%3A+Brand+New+Day" class="text-gold hover:text-gold-light">searching for it here</a>.`,
+        ],
+      },
+      {
+        heading: 'Supergirl (2026)',
+        paragraphs: [
+          "Supergirl, directed by Craig Gillespie and starring Milly Alcock as Kara Zor-El, opened in theaters on June 26, 2026. Unlike Spider-Man, Supergirl has already moved past its theatrical only window. As of early August 2026, you can legally rent or buy it digitally on Prime Video, Apple TV, Google Play, and Fandango at Home. A physical 4K, Blu-ray, and DVD release is set for September 8, 2026.",
+          "Supergirl is expected to arrive on HBO Max sometime this fall, since Warner Bros. typically moves its DC titles there, but an official subscription streaming date has not been confirmed yet.",
+          `You can check its current listing and trending status by <a href="/search?q=Supergirl" class="text-gold hover:text-gold-light">searching for it here</a>.`,
+        ],
+      },
+      {
+        heading: 'Why we do not list unofficial download links for these',
+        paragraphs: [
+          "Both of these are new, actively protected theatrical releases, not public domain films. We only offer direct downloads for titles that are genuinely in the public domain, like the classics on our site. For everything else, including brand new blockbusters like these, we point you toward real legal options and keep this page updated as official dates are announced. Follow our Telegram channel for updates the moment either film gets a confirmed streaming date.",
+        ],
+      },
+    ],
+  },
   {
     slug: 'best-public-domain-horror-movies-free-legal',
     title: '7 Public Domain Horror Movies You Can Legally Watch and Download for Free',
@@ -23,6 +65,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'A guide to genuinely public domain horror classics, why each one is legally free to download, and where to actually watch them.',
     publishedDate: '2026-08-03',
     tags: ['public domain', 'horror', 'free movies'],
+    featureMovieId: 963,
     sections: [
       {
         paragraphs: [
