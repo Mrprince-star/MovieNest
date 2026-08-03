@@ -5,6 +5,7 @@ import { getDetails, IMG } from '@/lib/tmdb';
 import { findCatalogEntry } from '@/lib/catalog';
 import { SITE } from '@/lib/config';
 import Shelf from '@/components/Shelf';
+import AdBanner from '@/components/AdBanner';
 
 export const revalidate = 3600;
 
@@ -132,6 +133,8 @@ export default async function TVDetailPage({ params }: Props) {
           </div>
         </div>
       </div>
+
+      <AdBanner variant="banner" />
 
       {show.similar?.results?.length > 0 && (
         <Shelf heading="Related Series" items={show.similar.results} fallbackMediaType="tv" />
