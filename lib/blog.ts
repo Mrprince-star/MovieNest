@@ -33,14 +33,14 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: '1. Night of the Living Dead (1968)',
         paragraphs: [
           "George Romero's Night of the Living Dead is public domain because of an accident, not a choice. When the distributor changed the film's title before release, the new prints lost their copyright notice. Under the copyright law of the time, that single mistake sent the film straight into the public domain the day it opened in theaters.",
-          "It also happens to be the film that invented the modern zombie genre as we know it. Slow, shambling, flesh eating undead did not really exist as a horror archetype before this. You can watch it and read more on our <a href="/movies/963" class="text-gold hover:text-gold-light">Night of the Living Dead page</a>.",
+          `It also happens to be the film that invented the modern zombie genre as we know it. Slow, shambling, flesh eating undead did not really exist as a horror archetype before this. You can watch it and read more on our <a href="/movies/963" class="text-gold hover:text-gold-light">Night of the Living Dead page</a>.`,
         ],
       },
       {
         heading: '2. Nosferatu (1922)',
         paragraphs: [
           "Nosferatu is public domain because someone tried to destroy it. German studio Prana Film adapted Bram Stoker's Dracula without buying the rights, changed the names, and got sued into oblivion by Stoker's widow. A court ordered every copy destroyed. A few prints survived abroad, and because the original copyright was never properly enforced internationally, it is free to watch in the US today.",
-          "It is also one of the most visually influential horror films ever made. Count Orlok's shadow climbing a staircase has been copied more times than almost any single shot in film history. Full details are on our <a href="/movies/426" class="text-gold hover:text-gold-light">Nosferatu page</a>.",
+          `It is also one of the most visually influential horror films ever made. Count Orlok's shadow climbing a staircase has been copied more times than almost any single shot in film history. Full details are on our <a href="/movies/426" class="text-gold hover:text-gold-light">Nosferatu page</a>.`,
         ],
       },
       {
@@ -85,7 +85,9 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export function getAllPosts(): BlogPost[] {
   return [...BLOG_POSTS].sort(
-    (a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+    (a, b) =>
+      new Date(b.publishedDate).getTime() -
+      new Date(a.publishedDate).getTime()
   );
 }
 
