@@ -22,6 +22,48 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'michael-jackson-biopic-starz-streaming-date-billion-dollar-record',
+    title: 'Michael Is Streaming August 10: How the $1 Billion Biopic Beat Oppenheimer',
+    description:
+      'The Michael Jackson biopic Michael hits Starz on August 10, 2026, after becoming the highest grossing biopic in history. Here is what is confirmed and where to watch it.',
+    publishedDate: '2026-08-04',
+    tags: ['where to watch', 'biopic', 'box office'],
+    featureMovieId: 936075,
+    sections: [
+      {
+        paragraphs: [
+          "Michael, the Michael Jackson biopic starring his real life nephew Jaafar Jackson, is about to make the jump from theaters to your living room. Lionsgate and Starz confirmed the film begins streaming on August 10, 2026, and it arrives with a genuinely remarkable box office story behind it.",
+        ],
+      },
+      {
+        heading: 'When and where you can actually watch it',
+        paragraphs: [
+          "Michael premieres on Starz starting August 10, 2026, available through the Starz app and Starz streaming and on demand platforms, with a simultaneous linear TV premiere on the Starz cable channel at 7 p.m. ET and PT the same day. If you already have a Starz subscription, no extra step is needed, it will simply be there. Before this, the film had already been available to rent digitally following a June 9, 2026 premium video on demand release, so this Starz debut marks its first home for subscription streaming specifically, not its first appearance at home overall.",
+          `You can see our full page for it, including trailer and cast, on our <a href="/movies/936075" class="text-gold hover:text-gold-light">Michael movie page</a>.`,
+        ],
+      },
+      {
+        heading: 'The record it actually broke',
+        paragraphs: [
+          "Michael opened in theaters on April 24, 2026 to $97.2 million domestically, a debut weekend record for a musical biopic on its own. It kept climbing from there. By mid June, it passed Bohemian Rhapsody's $911 million to become the highest grossing music biopic of all time. By July 14, it crossed the billion dollar mark worldwide entirely, finishing with roughly $372.3 million domestic and just over $1 billion globally.",
+          "That total makes Michael the highest grossing biographical film of any kind in box office history, ahead of Oppenheimer. It is also now Lionsgate's single biggest release ever, surpassing every other film the studio has put out.",
+        ],
+      },
+      {
+        heading: 'A rare split between critics and audiences',
+        paragraphs: [
+          "Here is the part that makes this story more interesting than a simple box office headline. Michael sits at just 38 percent with critics on Rotten Tomatoes, a genuinely mixed to negative score. Audiences disagree almost completely, giving it a 97 percent audience score alongside an A- CinemaScore, the kind of gap that shows up when a film connects emotionally with the public in a way that reviews do not fully capture. A billion dollar box office run from a film critics were lukewarm on is rare, and it says something about how much cultural pull Michael Jackson's story and music still carry, decades after his death.",
+        ],
+      },
+      {
+        heading: 'Quick summary',
+        paragraphs: [
+          "Michael streams on Starz starting August 10, 2026, is already available to rent digitally, and now holds the record as the highest grossing biopic in history at over a billion dollars worldwide, all despite a mixed critical reception. If you have Starz, this is one of the easiest big releases of the year to catch up on at home.",
+        ],
+      },
+    ],
+  },
+  {
     slug: 'spider-man-brand-new-day-box-office-record-avengers-endgame',
     title: 'Spider-Man: Brand New Day Just Broke Avengers: Endgame Box Office Record',
     description:
