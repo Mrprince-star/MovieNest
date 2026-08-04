@@ -22,6 +22,50 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'spider-man-brand-new-day-box-office-record-avengers-endgame',
+    title: 'Spider-Man: Brand New Day Just Broke Avengers: Endgame Box Office Record',
+    description:
+      'A breakdown of how Spider-Man: Brand New Day became the biggest opening weekend in box office history, beating the record Avengers: Endgame held for seven years.',
+    publishedDate: '2026-08-04',
+    tags: ['box office', 'spider-man', 'news'],
+    featureMovieId: 969681,
+    sections: [
+      {
+        paragraphs: [
+          "For seven years, Avengers: Endgame held the record for the biggest domestic opening weekend in movie history. As of this week, that record belongs to Spider-Man: Brand New Day. Here is exactly what happened, with the real numbers, not just headline claims.",
+        ],
+      },
+      {
+        heading: 'The final numbers',
+        paragraphs: [
+          "Spider-Man: Brand New Day closed its opening weekend with $360 million at the domestic box office, according to final Monday numbers from Sony Pictures. That edges past Avengers: Endgame's previous record of $357.1 million from April 2019, a number that had stood untouched since. The two films are now the only movies in history to cross $300 million in a single opening weekend domestically.",
+          "Globally, Brand New Day pulled in $932 million over the weekend, its second-best global opening in history behind only Endgame's $1.2 billion. So while it did not beat Endgame worldwide, it beat it where it mattered most for the domestic record books.",
+        ],
+      },
+      {
+        heading: 'It broke more than one record',
+        paragraphs: [
+          "The Thursday night preview screenings alone brought in $72 million, beating Endgame's previous preview record of $60 million. Friday, including those previews, hit $169.8 million, another all time high, topping Endgame's $156.7 million opening day. Saturday added $101.5 million, and the film closed out Sunday stronger than Sony had initially projected, pushing the final total past the $355 million estimate reported over the weekend.",
+          "Attendance told a similar story. An estimated 24.1 million people bought tickets over the weekend, a record for the modern box office tracking era, ahead of the 20 million who turned out for Spider-Man: No Way Home in 2021.",
+        ],
+      },
+      {
+        heading: 'Why this one connected so hard',
+        paragraphs: [
+          "Industry forecasters were not predicting this. Boxoffice Pro had projected an opening in the $280 to $300 million range going into the weekend, a number they themselves called optimistic. The film blew past it. Part of that comes down to genuine audience reaction rather than pure hype. Brand New Day is sitting at a 90 percent critic score and a rare 98 percent audience score, the kind of gap that usually signals a movie people are actively telling their friends to go see.",
+          "It also helps that this continues a run of steady growth for Tom Holland's Spider-Man specifically. His first solo film, Homecoming, opened to $117 million in 2017. No Way Home more than doubled that with a $260 million domestic debut in 2021. Brand New Day has now nearly tripled where the character started just nine years ago.",
+        ],
+      },
+      {
+        heading: 'What this means going forward',
+        paragraphs: [
+          "Records like this tend to get treated as one off headlines, but the more interesting story is what it says about the theatrical experience right now. This was also, industry wide, the biggest single weekend at the box office ever recorded, with roughly $430 million spent on movie tickets across every film in theaters, not just Spider-Man. That is a real signal that big theatrical events still pull people out of the house in a way that was genuinely in question a few years ago.",
+          `You can see our full page for Spider-Man: Brand New Day, including trailer and cast, on our <a href="/movies/969681" class="text-gold hover:text-gold-light">movie page here</a>.`,
+        ],
+      },
+    ],
+  },
+  {
     slug: 'where-to-watch-the-odyssey-obsession-avatar-aang-devils-mouth-2026',
     title: 'Where to Watch The Odyssey, Obsession, Avatar Aang, and The Devil\'s Mouth',
     description:
