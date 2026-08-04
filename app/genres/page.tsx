@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Shelf from '@/components/Shelf';
+import AdBanner from '@/components/AdBanner';
 import { getByGenre, GENRE_LIST } from '@/lib/tmdb';
 
 export const revalidate = 3600;
@@ -23,6 +24,9 @@ export default async function GenresIndexPage() {
     })
   );
 
+  const firstHalf = rows.slice(0, 3);
+  const secondHalf = rows.slice(3);
+
   return (
     <div className="pb-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-4">
@@ -44,7 +48,21 @@ export default async function GenresIndexPage() {
         </div>
       </div>
 
-      {rows.map(({ genre, movies }) =>
+      {firstHalf.map(({ genre, movies }) =>
+        genre ? (
+          <Shelf
+            key={genre.id}
+            heading={genre.name}
+            items={movies}
+            seeAllHref={`/genres/${genre.id}`}
+            fallbackMediaType="movie"
+          />
+        ) : null
+      )}
+
+      <AdBanner variant="native" />
+
+      {secondHalf.map(({ genre, movies }) =>
         genre ? (
           <Shelf
             key={genre.id}
