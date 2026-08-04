@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import MovieCard from '@/components/MovieCard';
+import AdBanner from '@/components/AdBanner';
 import { getPopular } from '@/lib/tmdb';
 
 export const revalidate = 3600;
@@ -28,6 +29,8 @@ export default async function TVPage() {
           />
         ))}
       </div>
+
+      <AdBanner variant="native" />
     </div>
   );
 }
