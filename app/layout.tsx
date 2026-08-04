@@ -3,7 +3,7 @@ import { Bebas_Neue, Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import AdBanner from '@/components/AdBanner';
+import StickyBottomAd from '@/components/StickyBottomAd';
 import { SITE } from '@/lib/config';
 
 const display = Bebas_Neue({
@@ -94,10 +94,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${display.variable} ${body.variable} ${mono.variable} font-body bg-ink text-bone`}>
         <Header />
-        <AdBanner variant="banner" />
-        <main className="min-h-screen">{children}</main>
-        <AdBanner variant="banner" />
+        <main className="min-h-screen pb-24">{children}</main>
         <Footer />
+        <StickyBottomAd />
       </body>
     </html>
   );

@@ -34,6 +34,8 @@ export default async function HomePage() {
         </div>
       )}
 
+      <AdBanner variant="banner" />
+
       <Shelf id="trending" heading="Trending This Week" items={trending} seeAllHref="/movies" />
       <Shelf heading="Latest Movies" items={nowPlaying} seeAllHref="/movies" fallbackMediaType="movie" />
       <Shelf heading="Popular TV Series" items={popularTV} seeAllHref="/tv" fallbackMediaType="tv" />
