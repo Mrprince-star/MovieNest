@@ -22,12 +22,63 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'where-to-watch-the-odyssey-obsession-avatar-aang-devils-mouth-2026',
+    title: 'Where to Watch The Odyssey, Obsession, Avatar Aang, and The Devil\'s Mouth',
+    description:
+      'A clear, current guide to four of 2026 most talked about releases, and exactly where you can legally watch each one right now.',
+    publishedDate: '2026-08-03',
+    tags: ['where to watch', '2026 movies', 'streaming guide'],
+    featureMovieId: 1368337,
+    sections: [
+      {
+        paragraphs: [
+          "Not every big 2026 release is stuck in a theaters only window. A couple of these are already streaming right now, while others still have a wait ahead of them. Here is the actual current status of each, as of early August 2026.",
+        ],
+      },
+      {
+        heading: 'The Odyssey',
+        paragraphs: [
+          "Christopher Nolan's adaptation of Homer's epic opened in theaters, including IMAX, on July 17, 2026. As of now it remains a theaters only release, with no digital or streaming date confirmed. Nolan is known for insisting on long exclusive theatrical windows for his films, so based on the pattern set by his previous film Oppenheimer, industry estimates point to a possible digital rental release around mid to late November 2026, with a subscription streaming debut on Peacock likely even further out, possibly early 2027. Nothing here is official yet, so treat these as informed estimates rather than confirmed dates.",
+          `You can see our full page for it, including trailer and cast, on our <a href="/movies/1368337" class="text-gold hover:text-gold-light">The Odyssey page</a>.`,
+        ],
+      },
+      {
+        heading: 'Obsession',
+        paragraphs: [
+          "Obsession, the horror film built around a cursed novelty toy called the One Wish Willow, opened in theaters on May 15, 2026. It has already moved through its theatrical and rental windows and is now available to stream with a Peacock subscription. Under its distribution deal, it is expected to move over to Netflix around November 17, 2026, so if you already have Peacock, now is the easiest time to watch it.",
+          `You can see our full page for it, including trailer and cast, on our <a href="/movies/1339713" class="text-gold hover:text-gold-light">Obsession page</a>.`,
+        ],
+      },
+      {
+        heading: 'Avatar Aang: The Last Airbender',
+        paragraphs: [
+          "This one is the easiest yes on the list. Avatar Aang: The Last Airbender skipped a wide theatrical release entirely and premiered directly on Paramount+ on July 25, 2026, after a leak earlier in the year pushed Paramount to move up its release. It is available right now with any Paramount+ subscription, no waiting required.",
+          `You can see our full page for it, including trailer and cast, on our <a href="/movies/980431" class="text-gold hover:text-gold-light">Avatar Aang: The Last Airbender page</a>.`,
+        ],
+      },
+      {
+        heading: 'The Devil\'s Mouth',
+        paragraphs: [
+          "This survival horror film about a cave diving trip in Thailand gone wrong skipped a traditional theatrical run and premiered straight to Prime Video on July 29, 2026. If you have a Prime Video subscription, it is available to watch right now.",
+          `You can see our full page for it, including trailer and cast, on our <a href="/movies/1481343" class="text-gold hover:text-gold-light">The Devil's Mouth page</a>.`,
+        ],
+      },
+      {
+        heading: 'Quick summary',
+        paragraphs: [
+          "Two of these, Avatar Aang: The Last Airbender and Obsession, are already streaming and easy to watch today. The other two, The Odyssey and The Devil's Mouth, are newer, with The Devil's Mouth already on Prime Video and The Odyssey still theaters only for the time being. We will update this post as official streaming dates get confirmed.",
+        ],
+      },
+    ],
+  },
+  {
     slug: 'where-to-watch-spider-man-brand-new-day-supergirl-2026',
     title: 'Where to Watch Spider-Man: Brand New Day and Supergirl in 2026',
     description:
       'A clear, up to date guide to the legal ways to watch two of 2026 biggest releases, in theaters and at home.',
     publishedDate: '2026-08-03',
     tags: ['where to watch', '2026 movies', 'streaming guide'],
+    featureMovieId: 969681,
     sections: [
       {
         paragraphs: [
@@ -39,7 +90,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "Spider-Man: Brand New Day, directed by Destin Daniel Cretton and starring Tom Holland, opened in theaters on July 31, 2026. Right now, theaters are the only legal way to watch it. There is no confirmed digital, rental, or streaming date yet.",
           "Based on how Sony has handled previous Spider-Man releases, industry reporting suggests a premium digital rental could arrive sometime around late September to late October 2026, though Sony has not confirmed a date. Sony also has a Pay-1 deal that sends its films to Netflix after their theatrical and rental windows close, and early estimates based on that deal's typical timing point to a possible Netflix debut around late November 2026, though this is an estimate, not an announced date. If you are outside the US, the wait could be longer or shorter depending on your region's separate licensing deals.",
-          `You can check the film's current TMDB info and see if it has been added to our trending list by <a href="/search?q=Spider-Man%3A+Brand+New+Day" class="text-gold hover:text-gold-light">searching for it here</a>.`,
+          `You can see our full page for it, including trailer and cast, on our <a href="/movies/969681" class="text-gold hover:text-gold-light">Spider-Man: Brand New Day page</a>.`,
         ],
       },
       {
@@ -47,7 +98,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "Supergirl, directed by Craig Gillespie and starring Milly Alcock as Kara Zor-El, opened in theaters on June 26, 2026. Unlike Spider-Man, Supergirl has already moved past its theatrical only window. As of early August 2026, you can legally rent or buy it digitally on Prime Video, Apple TV, Google Play, and Fandango at Home. A physical 4K, Blu-ray, and DVD release is set for September 8, 2026.",
           "Supergirl is expected to arrive on HBO Max sometime this fall, since Warner Bros. typically moves its DC titles there, but an official subscription streaming date has not been confirmed yet.",
-          `You can check its current listing and trending status by <a href="/search?q=Supergirl" class="text-gold hover:text-gold-light">searching for it here</a>.`,
+          `You can see our full page for it, including trailer and cast, on our <a href="/movies/1081003" class="text-gold hover:text-gold-light">Supergirl page</a>.`,
         ],
       },
       {
