@@ -6,6 +6,7 @@ import { getAllPosts, getPostBySlug } from '@/lib/blog';
 import { getDetails, IMG } from '@/lib/tmdb';
 import { SITE } from '@/lib/config';
 import AdBanner from '@/components/AdBanner';
+import ShareButtons from '@/components/ShareButtons';
 
 type Props = { params: { slug: string } };
 
@@ -129,7 +130,7 @@ export default async function BlogPostPage({ params }: Props) {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-2 mt-10">
+        <div className="flex flex-wrap gap-2 mt-10 mb-8">
           {post.tags.map((tag) => (
             <span
               key={tag}
@@ -138,6 +139,10 @@ export default async function BlogPostPage({ params }: Props) {
               {tag}
             </span>
           ))}
+        </div>
+
+        <div className="border-t border-gold/10 pt-6">
+          <ShareButtons url={`${SITE.url}/blog/${post.slug}`} title={post.title} />
         </div>
       </div>
 
