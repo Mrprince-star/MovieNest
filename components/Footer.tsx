@@ -19,6 +19,7 @@ export default function Footer() {
             <li><Link href="/tv" className="hover:text-gold">TV Series</Link></li>
             <li><Link href="/genres" className="hover:text-gold">Genres</Link></li>
             <li><Link href="/search" className="hover:text-gold">Search</Link></li>
+            <li><Link href="/watchlist" className="hover:text-gold">Watchlist</Link></li>
           </ul>
         </div>
         <div>

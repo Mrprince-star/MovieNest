@@ -37,6 +37,7 @@ export default function Header() {
             </div>
             <Link href="/about" className="hover:text-gold transition-colors">About</Link>
             <Link href="/blog" className="hover:text-gold transition-colors">Blog</Link>
+            <Link href="/watchlist" className="hover:text-gold transition-colors">Watchlist</Link>
           </nav>
 
           <form action="/search" className="hidden sm:flex items-center">
@@ -103,6 +104,9 @@ export default function Header() {
             </Link>
             <Link href="/blog" onClick={() => setOpen(false)} className="py-2 hover:text-gold transition-colors">
               Blog
+            </Link>
+            <Link href="/watchlist" onClick={() => setOpen(false)} className="py-2 hover:text-gold transition-colors">
+              Watchlist
             </Link>
             <Link href="/contact" onClick={() => setOpen(false)} className="py-2 hover:text-gold transition-colors">
               Contact
