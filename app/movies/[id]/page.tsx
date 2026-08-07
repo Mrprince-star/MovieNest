@@ -7,6 +7,8 @@ import { getReview } from '@/lib/reviews';
 import { SITE } from '@/lib/config';
 import Shelf from '@/components/Shelf';
 import AdBanner from '@/components/AdBanner';
+import WatchlistButton from '@/components/WatchlistButton';
+import ShareButtons from '@/components/ShareButtons';
 
 export const revalidate = 3600;
 
@@ -39,6 +41,7 @@ export default async function MovieDetailPage({ params }: Props) {
     (v: any) => v.site === 'YouTube' && v.type === 'Trailer'
   );
   const cast = movie.credits?.cast?.slice(0, 8) ?? [];
+  const pageUrl = `${SITE.url}/movies/${movieId}`;
 
   const movieJsonLd = {
     '@context': 'https://schema.org',
@@ -113,7 +116,7 @@ export default async function MovieDetailPage({ params }: Props) {
 
             <p className="text-bone/80 leading-relaxed max-w-2xl mb-8">{movie.overview}</p>
 
-            <div className="flex flex-wrap gap-4 mb-10">
+            <div className="flex flex-wrap gap-4 mb-6">
               {catalogEntry ? (
                 <a
                   href={catalogEntry.downloadUrl}
@@ -143,6 +146,16 @@ export default async function MovieDetailPage({ params }: Props) {
                   Watch Trailer
                 </a>
               )}
+              <WatchlistButton
+                id={movieId}
+                mediaType="movie"
+                title={movie.title}
+                posterPath={movie.poster_path}
+              />
+            </div>
+
+            <div className="mb-10">
+              <ShareButtons url={pageUrl} title={movie.title} />
             </div>
 
             {cast.length > 0 && (
