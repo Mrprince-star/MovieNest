@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Bebas_Neue, Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
@@ -93,6 +94,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={`${display.variable} ${body.variable} ${mono.variable} font-body bg-ink text-bone`}>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaMeasurementId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${SITE.gaMeasurementId}');
+          `}
+        </Script>
         <Header />
         <main className="min-h-screen pb-24">{children}</main>
         <Footer />
