@@ -6,6 +6,8 @@ import { findCatalogEntry } from '@/lib/catalog';
 import { SITE } from '@/lib/config';
 import Shelf from '@/components/Shelf';
 import AdBanner from '@/components/AdBanner';
+import WatchlistButton from '@/components/WatchlistButton';
+import ShareButtons from '@/components/ShareButtons';
 
 export const revalidate = 3600;
 
@@ -30,12 +32,14 @@ export default async function TVDetailPage({ params }: Props) {
   const show = await getDetails('tv', params.id);
   if (!show) notFound();
 
-  const catalogEntry = findCatalogEntry('tv', Number(params.id));
+  const showId = Number(params.id);
+  const catalogEntry = findCatalogEntry('tv', showId);
   const year = show.first_air_date ? new Date(show.first_air_date).getFullYear() : null;
   const trailer = show.videos?.results?.find(
     (v: any) => v.site === 'YouTube' && v.type === 'Trailer'
   );
   const cast = show.credits?.cast?.slice(0, 8) ?? [];
+  const pageUrl = `${SITE.url}/tv/${showId}`;
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -83,7 +87,7 @@ export default async function TVDetailPage({ params }: Props) {
 
             <p className="text-bone/80 leading-relaxed max-w-2xl mb-8">{show.overview}</p>
 
-            <div className="flex flex-wrap gap-4 mb-10">
+            <div className="flex flex-wrap gap-4 mb-6">
               {catalogEntry ? (
                 <a
                   href={catalogEntry.downloadUrl}
@@ -113,6 +117,16 @@ export default async function TVDetailPage({ params }: Props) {
                   Watch Trailer
                 </a>
               )}
+              <WatchlistButton
+                id={showId}
+                mediaType="tv"
+                title={show.name}
+                posterPath={show.poster_path}
+              />
+            </div>
+
+            <div className="mb-10">
+              <ShareButtons url={pageUrl} title={show.name} />
             </div>
 
             {cast.length > 0 && (
