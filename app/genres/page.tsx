@@ -9,6 +9,9 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: 'Browse by Genre',
   description: 'Explore movies and TV series by genre on MovieNest — action, drama, horror, comedy, and more.',
+  alternates: {
+    canonical: '/genres',
+  },
 };
 
 // Show a curated set of genres on the hub page, each with a preview row.
