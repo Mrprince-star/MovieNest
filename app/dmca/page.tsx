@@ -4,6 +4,9 @@ import { SITE } from '@/lib/config';
 export const metadata: Metadata = {
   title: 'DMCA / Copyright Policy',
   description: `Copyright and takedown policy for ${SITE.name}.`,
+  alternates: {
+    canonical: '/dmca',
+  },
 };
 
 export default function DMCAPage() {
