@@ -8,6 +8,9 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: 'TV Series',
   description: 'Browse TV series reviews, trailers, and recommendations on MovieNest.',
+  alternates: {
+    canonical: '/tv',
+  },
 };
 
 export default async function TVPage() {
