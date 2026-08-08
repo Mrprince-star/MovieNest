@@ -20,6 +20,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${show.name} (${year}) — Review & Info`,
     description: show.overview?.slice(0, 155),
+    alternates: {
+      canonical: `/tv/${params.id}`,
+    },
     openGraph: {
       title: `${show.name} (${year})`,
       description: show.overview?.slice(0, 155),
