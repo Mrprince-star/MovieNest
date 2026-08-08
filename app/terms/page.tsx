@@ -4,6 +4,9 @@ import { SITE } from '@/lib/config';
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: `Terms of Service for ${SITE.name}.`,
+  alternates: {
+    canonical: '/terms',
+  },
 };
 
 export default function TermsPage() {
