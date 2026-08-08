@@ -4,6 +4,9 @@ import { SITE } from '@/lib/config';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: `Privacy Policy for ${SITE.name}.`,
+  alternates: {
+    canonical: '/privacy',
+  },
 };
 
 export default function PrivacyPage() {
