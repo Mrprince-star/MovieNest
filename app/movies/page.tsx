@@ -8,6 +8,9 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: 'Movies',
   description: 'Browse movie reviews, trailers, and free downloads of public domain films on MovieNest.',
+  alternates: {
+    canonical: '/movies',
+  },
 };
 
 export default async function MoviesPage() {
