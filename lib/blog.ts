@@ -102,7 +102,7 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: 'What this means going forward',
         paragraphs: [
           "Records like this tend to get treated as one off headlines, but the more interesting story is what it says about the theatrical experience right now. This was also, industry wide, the biggest single weekend at the box office ever recorded, with roughly $430 million spent on movie tickets across every film in theaters, not just Spider-Man. That is a real signal that big theatrical events still pull people out of the house in a way that was genuinely in question a few years ago.",
-          `You can see our full page for Spider-Man: Brand New Day, including trailer and cast, on our <a href="/movies/969681" class="text-gold hover:text-gold-light">movie page here</a>.`,
+          `You can see our full page for Spider-Man: Brand New Day, including trailer and cast, on our <a href="/movies/969681" class="text-gold hover:text-gold-light">movie page here</a>. If you have not seen it yet and are wondering when it lands at home, we cover that separately in <a href="/blog/where-to-watch-spider-man-brand-new-day-supergirl-2026" class="text-gold hover:text-gold-light">where to watch Spider-Man: Brand New Day and Supergirl</a>.`,
         ],
       },
     ],
@@ -176,7 +176,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "Spider-Man: Brand New Day, directed by Destin Daniel Cretton and starring Tom Holland, opened in theaters on July 31, 2026. Right now, theaters are the only legal way to watch it. There is no confirmed digital, rental, or streaming date yet.",
           "Based on how Sony has handled previous Spider-Man releases, industry reporting suggests a premium digital rental could arrive sometime around late September to late October 2026, though Sony has not confirmed a date. Sony also has a Pay-1 deal that sends its films to Netflix after their theatrical and rental windows close, and early estimates based on that deal's typical timing point to a possible Netflix debut around late November 2026, though this is an estimate, not an announced date. If you are outside the US, the wait could be longer or shorter depending on your region's separate licensing deals.",
-          `You can see our full page for it, including trailer and cast, on our <a href="/movies/969681" class="text-gold hover:text-gold-light">Spider-Man: Brand New Day page</a>.`,
+          `You can see our full page for it, including trailer and cast, on our <a href="/movies/969681" class="text-gold hover:text-gold-light">Spider-Man: Brand New Day page</a>. It also just set a real box office record, which we break down in <a href="/blog/spider-man-brand-new-day-box-office-record-avengers-endgame" class="text-gold hover:text-gold-light">how it beat Avengers: Endgame's opening weekend</a>.`,
         ],
       },
       {
@@ -257,6 +257,7 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: 'Why do so many old films end up public domain?',
         paragraphs: [
           "Under older US copyright law, a film's copyright had to be actively renewed after a set number of years, or it expired automatically. Studios sometimes simply forgot, especially for films they did not expect to remain valuable. That is how so many genuinely good films from the 1920s through the 1960s ended up freely available today, decades before more recent copyright law changes extended protection terms significantly.",
+          `Looking for more recent scares instead? Browse our full <a href="/genres/27" class="text-gold hover:text-gold-light">horror genre page</a> for reviews of newer releases too.`,
         ],
       },
     ],
