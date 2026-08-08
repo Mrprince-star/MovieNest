@@ -7,6 +7,9 @@ import { getDetails, IMG } from '@/lib/tmdb';
 export const metadata: Metadata = {
   title: 'Blog',
   description: 'Guides, lists, and deep dives on movies and TV from MovieNest.',
+  alternates: {
+    canonical: '/blog',
+  },
 };
 
 export default async function BlogIndexPage() {
