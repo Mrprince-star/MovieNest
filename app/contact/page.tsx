@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { SITE } from '@/lib/config';
 
 export const metadata: Metadata = {
@@ -15,7 +16,11 @@ export default function ContactPage() {
       <h1 className="font-display text-4xl sm:text-5xl tracking-wide mb-4">Contact Us</h1>
       <p className="text-bone/80 leading-relaxed mb-10">
         Questions, feedback, or a takedown request? Send us a message below, or reach out directly
-        through email or Telegram.
+        through email or Telegram. If your message is specifically a copyright concern, our{' '}
+        <Link href="/dmca" className="text-gold">
+          DMCA and copyright policy
+        </Link>{' '}
+        explains what to include so we can act on it quickly.
       </p>
 
       <form
