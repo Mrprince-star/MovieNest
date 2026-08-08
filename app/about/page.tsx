@@ -4,6 +4,9 @@ import { SITE } from '@/lib/config';
 export const metadata: Metadata = {
   title: 'About',
   description: `Learn about ${SITE.name} — reviews, trailers, and a community for movie and TV lovers.`,
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 export default function AboutPage() {
