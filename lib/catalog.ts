@@ -33,6 +33,42 @@ export const OPEN_SOURCE_CATALOG: CatalogEntry[] = [
     downloadUrl: 'https://archive.org/details/night_of_the_living_dead',
     source: 'Public Domain — archive.org',
   },
+  {
+    tmdbId: 3085, // His Girl Friday (1940)
+    mediaType: 'movie',
+    downloadUrl: 'https://archive.org/details/HisGirlFriday1940_201505',
+    source: 'Public Domain — archive.org',
+  },
+  {
+    tmdbId: 4808, // Charade (1963)
+    mediaType: 'movie',
+    downloadUrl: 'https://archive.org/details/1963-charade',
+    source: 'Public Domain — archive.org',
+  },
+  {
+    tmdbId: 961, // The General (1926)
+    mediaType: 'movie',
+    downloadUrl: 'https://archive.org/details/TheGeneral_201312',
+    source: 'Public Domain — archive.org',
+  },
+  {
+    tmdbId: 20367, // Detour (1945)
+    mediaType: 'movie',
+    downloadUrl: 'https://archive.org/details/detour1945HD',
+    source: 'Public Domain — archive.org',
+  },
+  {
+    tmdbId: 775, // A Trip to the Moon (1902)
+    mediaType: 'movie',
+    downloadUrl: 'https://archive.org/details/ATripToTheMoonGeorgeMelies',
+    source: 'Public Domain — archive.org',
+  },
+  {
+    tmdbId: 964, // The Phantom of the Opera (1925)
+    mediaType: 'movie',
+    downloadUrl: 'https://archive.org/details/ThePhantomOfTheOpera_201612',
+    source: 'Public Domain — archive.org',
+  },
 ];
 
 export function findCatalogEntry(mediaType: 'movie' | 'tv', tmdbId: number) {
