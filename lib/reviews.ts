@@ -87,6 +87,157 @@ export const REVIEWS: Record<number, ReviewEntry> = {
   },
 };
 
+
+  // His Girl Friday (1940)
+  3085: {
+    review: [
+      "His Girl Friday moves faster than almost any comedy made before or since. Director Howard Hawks had his actors overlap their dialogue on purpose, cutting people off mid sentence the way real conversations actually work, and the effect is still startling nearly ninety years later. The film reworks the play The Front Page by turning the lead reporter character into a woman, Hildy Johnson, which sharpens every scene into a tug of war between her ex husband editor and her new fiance.",
+      "It also happens to be public domain for a fairly mundane reason. Studios at the time had to actively file paperwork to renew a film's copyright after a set number of years, and this one simply was not renewed, sending a genuine A list studio comedy into the public domain decades before most people expect that to happen.",
+    ],
+    faqs: [
+      {
+        question: 'Is His Girl Friday really public domain and free to watch?',
+        answer:
+          "Yes. Its copyright was not renewed after the required term, which under the copyright law of the time meant it fell into the public domain and can be legally downloaded and shared today.",
+      },
+      {
+        question: 'Why does everyone talk so fast in this movie?',
+        answer:
+          "Director Howard Hawks deliberately had actors overlap and talk over each other to make the dialogue feel more natural and rapid, a technique that became one of the film's most famous trademarks.",
+      },
+      {
+        question: 'Is His Girl Friday based on a real play?',
+        answer:
+          "Yes, it's adapted from the 1928 stage play The Front Page, with the major change of turning the lead reporter role into a woman for this version.",
+      },
+    ],
+  },
+
+  // Charade (1963)
+  4808: {
+    review: [
+      "Charade is often called the best Hitchcock movie Alfred Hitchcock never actually made. It stars Cary Grant and Audrey Hepburn in a Paris set story that slides between comedy, romance, and genuine thriller tension, with a plot involving stolen money and a rotating cast of suspicious characters that keeps you guessing who to trust until the end.",
+      "What makes its public domain status notable is that this is a much glossier, later studio film than most public domain titles. It ended up free due to a clerical error, the copyright notice on early prints was missing the actual word Copyright, just showing the symbol and date, which under the law at the time was enough to invalidate the protection entirely.",
+    ],
+    faqs: [
+      {
+        question: 'Is Charade really public domain and legal to download?',
+        answer:
+          "Yes. A printing error on its original copyright notice, missing the required word Copyright, caused it to enter the public domain despite being a major studio release.",
+      },
+      {
+        question: 'Why did such a big studio film end up public domain?',
+        answer:
+          "A technical mistake in how the copyright notice was printed on early prints invalidated the copyright under the rules in place in 1963, something that would not happen under today's copyright law.",
+      },
+      {
+        question: 'Is Charade connected to Alfred Hitchcock?',
+        answer:
+          "Not officially. It was directed by Stanley Donen, but its blend of romance, comedy, and suspense is so similar to Hitchcock's style that critics have nicknamed it his best uncredited film.",
+      },
+    ],
+  },
+
+  // The General (1926)
+  961: {
+    review: [
+      "The General is widely considered Buster Keaton's masterpiece, and by many critics one of the greatest films ever made, full stop. Keaton performed his own stunts, including sequences involving a full sized moving train, with no special effects trickery, which is part of why the physical comedy still holds up as genuinely impressive rather than dated.",
+      "It's loosely based on a real Civil War era locomotive chase, and while it did not do well on its initial release, its reputation has only grown over the decades. Like many silent films from this era, it fell into the public domain after its copyright was not renewed.",
+    ],
+    faqs: [
+      {
+        question: 'Is The General really public domain?',
+        answer:
+          "Yes, its copyright was not renewed after the required term, placing it in the public domain, which is why it can be freely downloaded and watched today.",
+      },
+      {
+        question: 'Did Buster Keaton really do his own stunts?',
+        answer:
+          "Yes, including dangerous sequences involving a full sized train, without stunt doubles or the special effects techniques available to filmmakers today.",
+      },
+      {
+        question: 'Is The General based on a true story?',
+        answer:
+          "It's loosely inspired by a real Civil War era train chase known as the Great Locomotive Chase, though the film takes significant creative liberties with the actual events.",
+      },
+    ],
+  },
+
+  // Detour (1945)
+  20367: {
+    review: [
+      "Detour is proof that a great film does not need a real budget. Shot in about six days on threadbare sets, it tells a bleak, paranoid story of a hitchhiker whose road trip spirals into a nightmare of bad luck and worse decisions. Critic Roger Ebert included it in his Great Movies collection specifically because of how much genuine dread it manages to create despite its obvious limitations.",
+      "Ann Savage's performance as Vera is the film's most talked about element, a genuinely unsettling presence that elevates the material well beyond its budget. Like many films from this era, its copyright was not properly renewed, placing it in the public domain today.",
+    ],
+    faqs: [
+      {
+        question: 'Is Detour public domain and free to watch?',
+        answer:
+          "Yes, its copyright was not renewed after the required term, which placed it in the public domain and makes it legal to download and share today.",
+      },
+      {
+        question: 'Why does this film look so rough technically?',
+        answer:
+          "It was made on an extremely small budget in about six days, with sparse sets and limited production value, which was typical for low budget films of this era known as B pictures.",
+      },
+      {
+        question: 'Is Detour worth watching despite its low budget?',
+        answer:
+          "Many film critics and historians consider it one of the best examples of film noir precisely because of how much tension it creates despite its limitations, and it has been preserved in the US National Film Registry.",
+      },
+    ],
+  },
+
+  // A Trip to the Moon (1902)
+  775: {
+    review: [
+      "A Trip to the Moon is where science fiction cinema effectively begins. Made by French filmmaker Georges Melies in 1902, its image of a rocket landing in the eye of a very unhappy looking moon face is one of the most reproduced images in all of film history, recognizable even to people who have never seen the actual film.",
+      "At around 13 to 16 minutes depending on the print, it is a quick watch, but a genuinely important one. Melies pioneered many of the special effects techniques, like stop motion substitution and hand painted color, that filmmakers would build on for decades. Its public domain status comes simply from its age, films from this era predate modern copyright terms entirely.",
+    ],
+    faqs: [
+      {
+        question: 'Is A Trip to the Moon public domain?',
+        answer:
+          "Yes. Due to its age, made in 1902, it is in the public domain in the United States and can be freely downloaded and shared.",
+      },
+      {
+        question: 'How long is A Trip to the Moon?',
+        answer:
+          "It runs approximately 13 to 16 minutes depending on the specific print and frame rate used, making it a quick watch compared to feature length films.",
+      },
+      {
+        question: 'Why is this film historically important?',
+        answer:
+          "It's widely regarded as one of the first true science fiction films and pioneered special effects techniques, like stop motion substitution, that influenced decades of filmmaking after it.",
+      },
+    ],
+  },
+
+  // The Phantom of the Opera (1925)
+  964: {
+    review: [
+      "The 1925 Phantom of the Opera is best remembered today for one thing above all else, Lon Chaney's makeup. Chaney designed and applied his own ghoulish transformation and kept it a closely guarded secret, reportedly even from the studio, so that the film's unmasking scene genuinely shocked audiences at its premiere in a way that's hard to recreate now that the image is so widely known.",
+      "Based on Gaston Leroux's novel, it predates the famous stage musical by decades and tells a considerably darker, more horror focused version of the story. Like many silent era films, its copyright was not properly renewed, placing it in the public domain today.",
+    ],
+    faqs: [
+      {
+        question: 'Is this Phantom of the Opera public domain?',
+        answer:
+          "Yes, its copyright was not renewed after the required term, placing it in the public domain, which is why it can be freely downloaded and watched today.",
+      },
+      {
+        question: 'Is this the same story as the famous musical?',
+        answer:
+          "It's based on the same original novel by Gaston Leroux, but this 1925 silent film predates Andrew Lloyd Webber's musical by decades and takes a darker, more straightforwardly horror focused approach to the story.",
+      },
+      {
+        question: "Why is Lon Chaney's makeup in this film so famous?",
+        answer:
+          "Chaney designed and applied the makeup himself and kept the full look secret before release, so the reveal genuinely shocked 1925 audiences and became one of the most iconic moments in silent horror cinema.",
+      },
+    ],
+  },
+
 export function getReview(tmdbId: number): ReviewEntry | null {
   return REVIEWS[tmdbId] ?? null;
 }
