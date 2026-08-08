@@ -19,17 +19,17 @@ export const REVIEWS: Record<number, ReviewEntry> = {
     ],
     faqs: [
       {
-        question: 'Is Nosferatu (1922) really public domain and legal to download?',
+        question: "Is Nosferatu (1922) really public domain and legal to download?",
         answer:
           "Yes. Due to how its original copyright was handled internationally after a lawsuit from Bram Stoker's estate, Nosferatu is recognized as public domain in the United States, meaning it can be freely and legally downloaded and shared.",
       },
       {
-        question: 'Is Nosferatu the same story as Dracula?',
+        question: "Is Nosferatu the same story as Dracula?",
         answer:
           "It's an unauthorized adaptation of Stoker's Dracula with the character names and some plot points changed — Count Dracula becomes Count Orlok, for example — after the studio failed to secure the rights.",
       },
       {
-        question: 'Why did the film almost get completely destroyed?',
+        question: "Why did the film almost get completely destroyed?",
         answer:
           "A court ordered all prints destroyed after Bram Stoker's widow successfully sued for copyright infringement. Only a small number of copies that had already been distributed abroad survived.",
       },
@@ -44,17 +44,17 @@ export const REVIEWS: Record<number, ReviewEntry> = {
     ],
     faqs: [
       {
-        question: 'Is Metropolis actually free and legal to watch or download?',
+        question: "Is Metropolis actually free and legal to watch or download?",
         answer:
-          'Yes, Metropolis (1927) is in the public domain and can be legally downloaded and shared, which is why you can find it archived on sites like archive.org.',
+          "Yes, Metropolis (1927) is in the public domain and can be legally downloaded and shared, which is why you can find it archived on sites like archive.org.",
       },
       {
-        question: 'Why do different versions of Metropolis have different lengths?',
+        question: "Why do different versions of Metropolis have different lengths?",
         answer:
           "The film was cut down after its original release and large sections were lost for decades. A near-complete print discovered in Argentina in 2008 restored about 25 minutes, so restorations released before and after that discovery vary in length.",
       },
       {
-        question: 'Why is Metropolis considered important today?',
+        question: "Why is Metropolis considered important today?",
         answer:
           "It's widely credited as one of the first major science-fiction films and a huge influence on the visual language of the genre — its city design and robot character have been referenced in countless later films.",
       },
@@ -69,24 +69,22 @@ export const REVIEWS: Record<number, ReviewEntry> = {
     ],
     faqs: [
       {
-        question: 'Why is Night of the Living Dead public domain?',
+        question: "Why is Night of the Living Dead public domain?",
         answer:
-          'A copyright notice was accidentally omitted from prints when the distributor changed the film\'s title before release. Under the copyright rules in effect in 1968, that mistake caused the film to enter the public domain immediately.',
+          "A copyright notice was accidentally omitted from prints when the distributor changed the film's title before release. Under the copyright rules in effect in 1968, that mistake caused the film to enter the public domain immediately.",
       },
       {
-        question: 'Is it really free and legal to watch or download?',
+        question: "Is it really free and legal to watch or download?",
         answer:
-          'Yes — because of its public domain status, it can be legally downloaded, streamed, and shared without restriction, which is why it appears on so many free movie archives.',
+          "Yes — because of its public domain status, it can be legally downloaded, streamed, and shared without restriction, which is why it appears on so many free movie archives.",
       },
       {
-        question: 'Did this movie invent the modern zombie genre?',
+        question: "Did this movie invent the modern zombie genre?",
         answer:
           "It's widely credited as the film that established the modern conventions of zombie horror — slow-moving, flesh-eating undead — that most zombie media since has built on.",
       },
     ],
   },
-};
-
 
   // His Girl Friday (1940)
   3085: {
@@ -96,17 +94,17 @@ export const REVIEWS: Record<number, ReviewEntry> = {
     ],
     faqs: [
       {
-        question: 'Is His Girl Friday really public domain and free to watch?',
+        question: "Is His Girl Friday really public domain and free to watch?",
         answer:
           "Yes. Its copyright was not renewed after the required term, which under the copyright law of the time meant it fell into the public domain and can be legally downloaded and shared today.",
       },
       {
-        question: 'Why does everyone talk so fast in this movie?',
+        question: "Why does everyone talk so fast in this movie?",
         answer:
           "Director Howard Hawks deliberately had actors overlap and talk over each other to make the dialogue feel more natural and rapid, a technique that became one of the film's most famous trademarks.",
       },
       {
-        question: 'Is His Girl Friday based on a real play?',
+        question: "Is His Girl Friday based on a real play?",
         answer:
           "Yes, it's adapted from the 1928 stage play The Front Page, with the major change of turning the lead reporter role into a woman for this version.",
       },
@@ -121,17 +119,17 @@ export const REVIEWS: Record<number, ReviewEntry> = {
     ],
     faqs: [
       {
-        question: 'Is Charade really public domain and legal to download?',
+        question: "Is Charade really public domain and legal to download?",
         answer:
           "Yes. A printing error on its original copyright notice, missing the required word Copyright, caused it to enter the public domain despite being a major studio release.",
       },
       {
-        question: 'Why did such a big studio film end up public domain?',
+        question: "Why did such a big studio film end up public domain?",
         answer:
           "A technical mistake in how the copyright notice was printed on early prints invalidated the copyright under the rules in place in 1963, something that would not happen under today's copyright law.",
       },
       {
-        question: 'Is Charade connected to Alfred Hitchcock?',
+        question: "Is Charade connected to Alfred Hitchcock?",
         answer:
           "Not officially. It was directed by Stanley Donen, but its blend of romance, comedy, and suspense is so similar to Hitchcock's style that critics have nicknamed it his best uncredited film.",
       },
@@ -146,17 +144,17 @@ export const REVIEWS: Record<number, ReviewEntry> = {
     ],
     faqs: [
       {
-        question: 'Is The General really public domain?',
+        question: "Is The General really public domain?",
         answer:
           "Yes, its copyright was not renewed after the required term, placing it in the public domain, which is why it can be freely downloaded and watched today.",
       },
       {
-        question: 'Did Buster Keaton really do his own stunts?',
+        question: "Did Buster Keaton really do his own stunts?",
         answer:
           "Yes, including dangerous sequences involving a full sized train, without stunt doubles or the special effects techniques available to filmmakers today.",
       },
       {
-        question: 'Is The General based on a true story?',
+        question: "Is The General based on a true story?",
         answer:
           "It's loosely inspired by a real Civil War era train chase known as the Great Locomotive Chase, though the film takes significant creative liberties with the actual events.",
       },
@@ -171,17 +169,17 @@ export const REVIEWS: Record<number, ReviewEntry> = {
     ],
     faqs: [
       {
-        question: 'Is Detour public domain and free to watch?',
+        question: "Is Detour public domain and free to watch?",
         answer:
           "Yes, its copyright was not renewed after the required term, which placed it in the public domain and makes it legal to download and share today.",
       },
       {
-        question: 'Why does this film look so rough technically?',
+        question: "Why does this film look so rough technically?",
         answer:
           "It was made on an extremely small budget in about six days, with sparse sets and limited production value, which was typical for low budget films of this era known as B pictures.",
       },
       {
-        question: 'Is Detour worth watching despite its low budget?',
+        question: "Is Detour worth watching despite its low budget?",
         answer:
           "Many film critics and historians consider it one of the best examples of film noir precisely because of how much tension it creates despite its limitations, and it has been preserved in the US National Film Registry.",
       },
@@ -196,17 +194,17 @@ export const REVIEWS: Record<number, ReviewEntry> = {
     ],
     faqs: [
       {
-        question: 'Is A Trip to the Moon public domain?',
+        question: "Is A Trip to the Moon public domain?",
         answer:
           "Yes. Due to its age, made in 1902, it is in the public domain in the United States and can be freely downloaded and shared.",
       },
       {
-        question: 'How long is A Trip to the Moon?',
+        question: "How long is A Trip to the Moon?",
         answer:
           "It runs approximately 13 to 16 minutes depending on the specific print and frame rate used, making it a quick watch compared to feature length films.",
       },
       {
-        question: 'Why is this film historically important?',
+        question: "Why is this film historically important?",
         answer:
           "It's widely regarded as one of the first true science fiction films and pioneered special effects techniques, like stop motion substitution, that influenced decades of filmmaking after it.",
       },
@@ -221,12 +219,12 @@ export const REVIEWS: Record<number, ReviewEntry> = {
     ],
     faqs: [
       {
-        question: 'Is this Phantom of the Opera public domain?',
+        question: "Is this Phantom of the Opera public domain?",
         answer:
           "Yes, its copyright was not renewed after the required term, placing it in the public domain, which is why it can be freely downloaded and watched today.",
       },
       {
-        question: 'Is this the same story as the famous musical?',
+        question: "Is this the same story as the famous musical?",
         answer:
           "It's based on the same original novel by Gaston Leroux, but this 1925 silent film predates Andrew Lloyd Webber's musical by decades and takes a darker, more straightforwardly horror focused approach to the story.",
       },
@@ -237,6 +235,7 @@ export const REVIEWS: Record<number, ReviewEntry> = {
       },
     ],
   },
+};
 
 export function getReview(tmdbId: number): ReviewEntry | null {
   return REVIEWS[tmdbId] ?? null;
