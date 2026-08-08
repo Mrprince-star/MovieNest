@@ -11,6 +11,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${name} Movies & TV Series`,
     description: `Browse ${name.toLowerCase()} movies and TV series reviews, trailers, and downloads on MovieNest.`,
+    alternates: {
+      canonical: `/genres/${params.genre}`,
+    },
   };
 }
 
