@@ -8,7 +8,7 @@ export const SITE = {
   contactEmail: 'faithfulbizteam@gmail.com',
   // Sign up free at https://formspree.io, create a form, and paste its endpoint URL here.
   // It will look like: https://formspree.io/f/xxxxxxxx
-  formspreeEndpoint: 'https://formspree.io/f/your_form_id',
+  formspreeEndpoint: 'https://formspree.io/f/xnjeeqbk',
   url: 'https://movienest.faithfulbiz.com.ng',
   gaMeasurementId: 'G-63MN4270TB',
 };
