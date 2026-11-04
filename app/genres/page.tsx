@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Shelf from '@/components/Shelf';
-import AdBanner from '@/components/AdBanner';
 import { getByGenre, GENRE_LIST } from '@/lib/tmdb';
 
 export const revalidate = 3600;
@@ -62,8 +61,6 @@ export default async function GenresIndexPage() {
           />
         ) : null
       )}
-
-      <AdBanner variant="native" />
 
       {secondHalf.map(({ genre, movies }) =>
         genre ? (
