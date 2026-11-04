@@ -1,7 +1,6 @@
 import Hero from '@/components/Hero';
 import Shelf from '@/components/Shelf';
 import GenreChips from '@/components/GenreChips';
-import AdBanner from '@/components/AdBanner';
 import { getTrending, getPopular, getNowPlaying, isConfigured } from '@/lib/tmdb';
 
 export const revalidate = 3600;
@@ -14,7 +13,10 @@ export default async function HomePage() {
     getNowPlaying(),
   ]);
 
-  const featured = trending[0];
+  const trendingTitles = trending.filter(
+    (item: any) => item.media_type === 'movie' || item.media_type === 'tv'
+  );
+  const featured = trendingTitles[0];
 
   return (
     <>
@@ -34,14 +36,10 @@ export default async function HomePage() {
         </div>
       )}
 
-      <AdBanner variant="banner" />
-
-      <Shelf id="trending" heading="Trending This Week" items={trending} seeAllHref="/movies" />
+      <Shelf id="trending" heading="Trending This Week" items={trendingTitles} />
       <Shelf heading="Latest Movies" items={nowPlaying} seeAllHref="/movies" fallbackMediaType="movie" />
       <Shelf heading="Popular TV Series" items={popularTV} seeAllHref="/tv" fallbackMediaType="tv" />
       <GenreChips />
-
-      <AdBanner variant="native" />
 
       <Shelf heading="Recently Added" items={popularMovies} seeAllHref="/movies" fallbackMediaType="movie" />
     </>
