@@ -6,7 +6,6 @@ import { findCatalogEntry } from '@/lib/catalog';
 import { getReview } from '@/lib/reviews';
 import { SITE } from '@/lib/config';
 import Shelf from '@/components/Shelf';
-import AdBanner from '@/components/AdBanner';
 import WatchlistButton from '@/components/WatchlistButton';
 import ShareButtons from '@/components/ShareButtons';
 
@@ -207,8 +206,6 @@ export default async function MovieDetailPage({ params }: Props) {
           </div>
         </div>
       )}
-
-      <AdBanner variant="banner" />
 
       {movie.similar?.results?.length > 0 && (
         <Shelf heading="Related Movies" items={movie.similar.results} fallbackMediaType="movie" />
