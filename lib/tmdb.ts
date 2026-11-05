@@ -61,19 +61,30 @@ async function tmdb(path: string, params: Record<string, string> = {}) {
   }
 }
 
+// Collection endpoints power discovery shelves and search results. A temporary
+// TMDB outage should not take down the whole page; log it and render the
+// surrounding UI without catalogue items. Detail requests remain strict so
+// an API outage is never mistaken for a genuine "not found" response.
+async function tmdbList(path: string, params: Record<string, string> = {}) {
+  try {
+    const data = await tmdb(path, params);
+    return data?.results ?? [];
+  } catch (error) {
+    console.error(`TMDB collection request failed for ${path}:`, error);
+    return [];
+  }
+}
+
 export async function getTrending(mediaType: 'movie' | 'tv' | 'all' = 'all') {
-  const data = await tmdb(`/trending/${mediaType}/week`);
-  return data?.results ?? [];
+  return tmdbList(`/trending/${mediaType}/week`);
 }
 
 export async function getPopular(mediaType: 'movie' | 'tv') {
-  const data = await tmdb(`/${mediaType}/popular`);
-  return data?.results ?? [];
+  return tmdbList(`/${mediaType}/popular`);
 }
 
 export async function getNowPlaying() {
-  const data = await tmdb('/movie/now_playing');
-  return data?.results ?? [];
+  return tmdbList('/movie/now_playing');
 }
 
 export async function getDetails(mediaType: 'movie' | 'tv', id: string) {
@@ -83,13 +94,12 @@ export async function getDetails(mediaType: 'movie' | 'tv', id: string) {
 
 export async function searchMulti(query: string) {
   if (!query) return [];
-  const data = await tmdb('/search/multi', { query });
-  return (data?.results ?? []).filter((r: any) => r.media_type === 'movie' || r.media_type === 'tv');
+  const results = await tmdbList('/search/multi', { query });
+  return results.filter((r: any) => r.media_type === 'movie' || r.media_type === 'tv');
 }
 
 export async function getByGenre(mediaType: 'movie' | 'tv', genreId: string) {
-  const data = await tmdb(`/discover/${mediaType}`, { with_genres: genreId, sort_by: 'popularity.desc' });
-  return data?.results ?? [];
+  return tmdbList(`/discover/${mediaType}`, { with_genres: genreId, sort_by: 'popularity.desc' });
 }
 
 export function isConfigured() {
