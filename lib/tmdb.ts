@@ -48,16 +48,10 @@ async function tmdb(path: string, params: Record<string, string> = {}) {
   const qs = new URLSearchParams({ api_key: API_KEY, ...params }).toString();
   try {
     const res = await fetch(`${BASE}${path}?${qs}`, { next: { revalidate: 3600 } });
-    if (res.status === 404) return null;
-    if (!res.ok) {
-      throw new Error(`TMDB request failed (${res.status}) for ${path}`);
-    }
+    if (!res.ok) return null;
     return res.json();
-  } catch (error) {
-    if (error instanceof Error && error.message.startsWith('TMDB request failed')) {
-      throw error;
-    }
-    throw new Error(`Unable to reach TMDB for ${path}`, { cause: error });
+  } catch {
+    return null;
   }
 }
 
