@@ -13,33 +13,57 @@ export default function PrivacyPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
       <h1 className="font-display text-4xl sm:text-5xl tracking-wide mb-2">Privacy Policy</h1>
-      <p className="text-slate-soft font-mono text-sm mb-8">Last updated: {new Date().toLocaleDateString()}</p>
+      <p className="text-slate-soft font-mono text-sm mb-8">Last updated: November 4, 2026</p>
 
       <div className="prose prose-invert max-w-none text-bone/80 leading-relaxed space-y-6">
         <section>
           <h2 className="font-display text-2xl tracking-wide text-gold mb-2">Information We Collect</h2>
           <p>
-            {SITE.name} does not require an account to browse. We may automatically collect standard
-            technical information such as your browser type, device type, pages visited, and referring
-            site, typically through analytics tools.
+            {SITE.name} does not require an account to browse. When you use the site, technical and
+            usage information such as your browser type, device information, pages visited, and
+            referring website may be collected through analytics technologies.
           </p>
         </section>
 
         <section>
-          <h2 className="font-display text-2xl tracking-wide text-gold mb-2">Cookies &amp; Advertising</h2>
+          <h2 className="font-display text-2xl tracking-wide text-gold mb-2">Analytics</h2>
           <p>
-            We use third-party advertising (Adsterra) to support the site. Adsterra and its partners may
-            use cookies or similar technologies to serve ads based on your visits to this and other
-            websites. You can control cookies through your browser settings.
+            We use Google Analytics 4 to understand how visitors use {SITE.name}, measure site
+            performance, and improve our content and navigation. Google Analytics may use cookies
+            or similar technologies and may process information such as online identifiers and
+            interaction data under Google's applicable terms and privacy practices.
+          </p>
+          <p>
+            You can manage cookies through your browser settings. Blocking cookies may affect some
+            website functionality or the information available to our analytics reports.
           </p>
         </section>
 
         <section>
-          <h2 className="font-display text-2xl tracking-wide text-gold mb-2">Third-Party Content</h2>
+          <h2 className="font-display text-2xl tracking-wide text-gold mb-2">Contact Form</h2>
           <p>
-            Movie and TV metadata (posters, synopses, ratings) is provided by The Movie Database (TMDB).
-            Download links point to third-party or archival sources outside our control; we are not
-            responsible for their privacy practices.
+            If you contact us through the website form, we receive the information you submit,
+            including your name, email address, subject, and message. The form is processed by
+            Formspree, which handles the submission on our behalf. Please avoid including passwords,
+            payment details, or other sensitive information in a message.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl tracking-wide text-gold mb-2">Advertising</h2>
+          <p>
+            MovieNest does not currently load third-party advertising network scripts. If advertising
+            services are introduced, we will update this policy to explain the relevant providers,
+            technologies, and available privacy controls before those services are enabled.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="font-display text-2xl tracking-wide text-gold mb-2">Third-Party Services and Links</h2>
+          <p>
+            Movie and TV metadata, including posters, synopses, and ratings, is provided by The Movie
+            Database (TMDB). The site also links to external services and archival sources that are
+            not operated by MovieNest. Those third parties have their own privacy practices and terms.
           </p>
         </section>
 

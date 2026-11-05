@@ -4,7 +4,6 @@ import { Bebas_Neue, Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import StickyBottomAd from '@/components/StickyBottomAd';
 import { SITE } from '@/lib/config';
 
 const display = Bebas_Neue({
@@ -104,9 +103,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `}
         </Script>
         <Header />
-        <main className="min-h-screen pb-24">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
-        <StickyBottomAd />
       </body>
     </html>
   );

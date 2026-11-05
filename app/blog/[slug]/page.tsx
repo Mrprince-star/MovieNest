@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
 import { getDetails, IMG } from '@/lib/tmdb';
 import { SITE } from '@/lib/config';
-import AdBanner from '@/components/AdBanner';
 import ShareButtons from '@/components/ShareButtons';
 
 type Props = { params: { slug: string } };
@@ -148,8 +147,6 @@ export default async function BlogPostPage({ params }: Props) {
           <ShareButtons url={`${SITE.url}/blog/${post.slug}`} title={post.title} />
         </div>
       </div>
-
-      <AdBanner variant="native" />
     </div>
   );
 }
