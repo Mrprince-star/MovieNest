@@ -13,10 +13,7 @@ export default async function HomePage() {
     getNowPlaying(),
   ]);
 
-  const trendingTitles = trending.filter(
-    (item: any) => item.media_type === 'movie' || item.media_type === 'tv'
-  );
-  const featured = trendingTitles[0];
+  const featured = trending[0];
 
   return (
     <>
@@ -36,7 +33,7 @@ export default async function HomePage() {
         </div>
       )}
 
-      <Shelf id="trending" heading="Trending This Week" items={trendingTitles} />
+      <Shelf id="trending" heading="Trending This Week" items={trending} seeAllHref="/movies" />
       <Shelf heading="Latest Movies" items={nowPlaying} seeAllHref="/movies" fallbackMediaType="movie" />
       <Shelf heading="Popular TV Series" items={popularTV} seeAllHref="/tv" fallbackMediaType="tv" />
       <GenreChips />
